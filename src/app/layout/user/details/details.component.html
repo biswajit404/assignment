@@ -1,0 +1,45 @@
+<loading [state]="loading">
+    <section class="page-body">
+        <div class="panel-header">
+            <h2 class="heading">User Details</h2>
+        </div>
+        <div class="form-part box-shadow">
+            <div class="form-body">
+               <table class="table border-table">
+                    <tbody>
+                        <tr>
+                            <td><strong>First Name : </strong></td>
+                            <td>{{details.first_name}}</td>
+                            <td><strong>Last Name : </strong></td>
+                            <td>{{details.last_name}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Username : </strong></td>
+                            <td>{{details.username}}</td>
+                            <td><strong>Email : </strong></td>
+                            <td>{{details.email}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phone No : </strong></td>
+                            <td>{{details.phone_no}}</td>
+                            <td><strong>Pin Code : </strong></td>
+                            <td>{{details.pin_code}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Address : </strong></td>
+                            <td colspan="3">{{details.address}}</td>
+                        </tr>
+                    </tbody>
+               </table>
+            </div>
+            <div class="form-footer">
+                <button class="btn btn-danger" matRipple (click)="cancel()">
+                    <span>
+                        <i class="fas fa-times"></i>
+                    </span>
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </section>
+</loading>

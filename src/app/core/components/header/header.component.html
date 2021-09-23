@@ -1,0 +1,25 @@
+<header class="header-part">
+    <a class="logo-part" matRipple [routerLink]="['/']" href="javascript:void(0);">
+        <span>Vibrant</span>
+    </a>
+    <div class="header-component-part">
+        <div class="search-part">&nbsp;</div>
+        <div class="header-user-panel">
+            
+            <div class="user-drop-down">
+                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" matRipple>
+                    <div class="user-pic"><span><img [src]="userDetails.profile_img"/></span></div>
+                </button>
+                <div class="header-dropdown dropdown-menu user-dropdown">
+                    <div class="user-info-cvr">
+                        <div class="avitor"><img [src]="userDetails.profile_img"></div>
+                        <div class="user-info">                            
+                            <a (click)="logout()" href="javascript:void(0);">Sign Out</a>
+
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</header>

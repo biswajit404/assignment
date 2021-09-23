@@ -1,0 +1,11 @@
+<div class="input-group pull-right"
+    style="width: auto;border: 1px solid #ccc;padding: 0px 5px;border-radius: 5px;height: 32px;">
+    <label style="line-height: 29px;padding-bottom: 0px;margin: 0px; color: #989292;" for="itemPerPage">Items Count
+        :</label> &nbsp;
+    <select [(ngModel)]="item" name="itemPerPage" (change)="onSelectionChange()" id="itemPerPage" class="form-control"
+        style="padding: 0px;border: none; box-shadow: none;height: 26px;">
+        <option *ngFor="let num of itemPerPageNumList" [value]="num">
+            {{num}}
+        </option>
+    </select>
+</div>

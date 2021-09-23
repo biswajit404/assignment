@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;" class="target">
+    <symbol viewBox="0 0 24 24" id="icon_user">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <circle cx="8.5" cy="7" fill="none" r="4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <polyline fill="none" points="17 11 19 13 23 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </symbol>
+
+    <symbol id="icon_userlist" fill="none" stroke="currentColor" stroke-linecap="round"  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+    </symbol>
+
+</svg>
+
+<div class="sidebar">
+    <ul>
+        <ng-container *ngFor="let item of navigation" >
+            <li>
+                <a matRipple [routerLink]="[item.url]" routerLinkActive="active">
+                    <span>
+                        <svg-path [width]="'22'" [height]="'22'" [id]="item.icon"></svg-path>                            
+                    </span>
+                    {{item.title}}
+                </a>
+                
+            </li>
+        </ng-container>           
+    </ul>
+</div>

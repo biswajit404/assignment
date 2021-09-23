@@ -1,0 +1,75 @@
+<loading [state]="loading">
+    <section class="page-body">
+        <div class="panel-header">
+            <h2 class="heading">User List</h2>
+            <div class="label-btn">
+                <button class="btn btn-green ml-2" matRipple (click)="addNew()">
+                    <span>
+                        <svg fill="#fff" height="20px" width="20px" id="Layer_1"
+                            style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32"
+                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M28,14H18V4c0-1.104-0.896-2-2-2s-2,0.896-2,2v10H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h10v10c0,1.104,0.896,2,2,2  
+                    s2-0.896,2-2V18h10c1.104,0,2-0.896,2-2S29.104,14,28,14z" />
+                        </svg>
+                    </span>
+                    <p>Add New</p>
+                </button>
+            </div>
+        </div>
+        <div class="container-main">
+            <div class="list-table box-shadow">
+                <table class="table border-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <ng-container *ngFor="let headerTh of headerThOption ; let i = index">
+                                <th *ngIf="headerTh.selected">
+                                    {{headerTh.name}}
+                                </th>
+                            </ng-container>
+                            <th class="action-col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of userList; let i = index">
+                            <td>{{itemNo + i + 1}}</td>
+                            <td *ngIf="ShowColunm('first_name')">{{item.first_name}}</td>
+                            <td *ngIf="ShowColunm('last_name')">{{item.last_name ? item.last_name : '--'}}</td>
+                            <td *ngIf="ShowColunm('email')">{{item.email}}</td>
+                            <td *ngIf="ShowColunm('pin_code')">{{item.pin_code}}</td>
+                            <td class="action-col">
+                                <button class="action-btn" mat-icon-button [matMenuTriggerFor]="menu"
+                                    aria-label="Example icon-button with a menu">
+                                    <mat-icon>more_vert</mat-icon>
+                                </button>
+                                <mat-menu #menu="matMenu" class="action-dropdown">
+                                    <button mat-menu-item class="action-btn-label" (click)="edit(item)"><img
+                                            src="assets/img/table-icon-6.png" /><span>Edit</span></button>
+                                    <button mat-menu-item class="action-btn-label" (click)="view(item)"><img
+                                            src="assets/img/table-icon-14.png" /><span>View</span></button>
+                                    <button mat-menu-item class="action-btn-label" (click)="delete(item, i)"><img
+                                            src="assets/img/table-icon-5.png" /><span>Delete</span></button>
+                                </mat-menu>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row mt-3 mb-3 mr-0 ml-0" *ngIf="totalUser > 10">
+                    <div class="col-md-6 text-left" >
+                      <div class="pull-left">
+                        <item-per-page (countSelectionChanged)="onListCountSelectionChange($event)" [item]="itemPerPage"></item-per-page>
+                      </div>
+                    </div>
+                    <div class="col-md-6" *ngIf="totalUser > itemPerPage">
+                      <div class="pull-right">
+                        <ngb-pagination [collectionSize]="totalUser" [maxSize]="paginationMaxSize"
+                            [pageSize]="pageSize" [(page)]="defaultPagination" (pageChange)="pagination()" size="sm">
+                        </ngb-pagination>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+</loading>

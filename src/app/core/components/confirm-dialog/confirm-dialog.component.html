@@ -1,0 +1,38 @@
+<div class="modal-dialog animate__animated animate__fadeIn" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" [mat-dialog-close]="false">
+                <span aria-hidden="true">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px">
+                        <g id="cross">
+                            <line style="stroke: #fff;stroke-width: 2px;" x1="7" x2="25" y1="7" y2="25" />
+                            <line style="stroke: #fff;stroke-width: 2px;" x1="7" x2="25" y1="25" y2="7" />
+                        </g>
+                    </svg>
+                </span>
+            </button>
+            <div class="top-icon-part">
+                <i class="fas fa-check-circle"></i>
+                <h5 class="modal-title" id="">Confirm!</h5>
+            </div>
+        </div>
+        <div class="modal-body text-center">
+            <div [innerHTML]="confirmMessage"></div>
+        </div>
+        <div class="modal-footer justify-content-center">
+            <button class="btn btn-danger" matRipple [mat-dialog-close]="false">
+                <span>
+                    <i class="fas fa-times"></i>
+                </span>
+                Cancel
+            </button>
+            <button class="btn btn-green ml-3" matRipple [mat-dialog-close]="true">
+                <span>
+                    <i class="fas fa-check"></i>
+                </span>
+                Confirm
+            </button>
+        </div>
+
+    </div>
+</div>

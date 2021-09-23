@@ -1,0 +1,21 @@
+<div [ngClass]="{ loading: loadState !== LoadingStateType.Ready }">
+    <div class="loader-custom" *ngIf="loadState !== LoadingStateType.Ready">
+      <svg class="logo" id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0, 0, 400,400">
+        <g id="svgg">
+        
+        <path id="path1" d="M35.600 300.800 L 35.600 358.400 92.200 358.400 L 148.800 358.400 148.800 300.800 L 148.800 243.200 92.200 243.200 L 35.600 243.200 35.600 300.800 " stroke="none" fill="#04cc84" fill-rule="evenodd">
+        </path>    
+        
+        <path id="path2" d="M63.200 191.000 L 63.200 229.600 113.200 229.600 L 163.200 229.600 163.200 284.400 L 163.200 339.200 206.600 339.200 L 250.000 339.200 250.000 245.800 L 250.000 152.400 156.600 152.400 L 63.200 152.400 63.200 191.000 " stroke="none" fill="#f46424" fill-rule="evenodd">
+        </path>
+        
+        <path id="path3" d="M92.400 95.000 L 92.400 138.400 178.400 138.400 L 264.400 138.400 264.400 230.200 L 264.400 322.000 313.800 322.000 L 363.200 322.000 363.200 186.800 L 363.200 51.600 227.800 51.600 L 92.400 51.600 92.400 95.000 " stroke="none" fill="#04acec" fill-rule="evenodd">
+        </path>
+        
+        </g>
+      </svg>
+    </div>
+    <div *ngIf="loadState !== LoadingStateType.NotReady" [ngClass]="{ hidden: loadState === LoadingStateType.NotReady }">
+      <ng-content></ng-content>
+    </div>
+</div>

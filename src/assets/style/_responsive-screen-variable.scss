@@ -1,0 +1,16 @@
+//////////// Responsive style////////////
+// Defining values from bootstrap
+$screen-big: 1600px;
+$screen-xl-min: 1366px;
+$screen-xl-max: ($screen-xl-min - 1); //1365px
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1); //1199px
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1); //991px
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1); //767px
+// Custom
+$mobile-device-lg:640px;
+$mobile-device-md:580px;
+$mobile-device-sm:480px;
+$mobile-device-sm-min:479px;

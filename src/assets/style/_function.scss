@@ -1,0 +1,72 @@
+// Margin Top Function
+@for $i from 0 through 6 {
+    .m-t-#{$i} {
+        margin-top: 5px * $i;
+    }
+}
+
+// Margin Bottom Function
+@for $i from 0 through 6 {
+    .m-b-#{$i} {
+        margin-bottom: 5px * $i;
+    }
+}
+
+// Margin Left Function
+@for $i from 0 through 6 {
+    .m-l-#{$i} {
+        margin-left: 5px * $i;
+    }
+}
+
+// Margin Right Function
+@for $i from 0 through 6 {
+    .m-r-#{$i} {
+        margin-right: 5px * $i;
+    }
+}
+
+///////////////////////////////////////////////////
+// Padding Top Function
+@for $i from 0 through 6 {
+    .p-t-#{$i} {
+        padding-top: 5px * $i;
+    }
+}
+
+// Padding Bottom Function
+@for $i from 0 through 6 {
+    .p-b-#{$i} {
+        padding-bottom: 5px * $i;
+    }
+}
+
+// Padding Left Function
+@for $i from 0 through 6 {
+    .p-l-#{$i} {
+        padding-left: 5px * $i;
+    }
+}
+
+// Padding Right Function
+@for $i from 0 through 6 {
+    .p-r-#{$i} {
+        padding-right: 5px * $i;
+    }
+}
+
+
+///////////////////////////////////////////////////
+// table column width
+@for $i from 0 through 10 {
+    .column-#{$i} {
+        min-width: 50px * $i;
+    }
+}
+///////////////////////////////////////////////////
+// table column width
+@for $i from 0 through 20 {
+    .column-width-#{$i} {
+        width: 10px * $i;
+    }
+}

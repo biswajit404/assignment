@@ -1,0 +1,226 @@
+@import '../../assets/style/mixin';
+.login-body{
+    display: flex;
+    min-height: 100vh;
+    background: #fff;
+    .login-form{
+        position: relative;
+        z-index: 2;
+        flex: 0 0 515px;
+        max-width: 100%;
+        background: #f6f6f6;
+        box-shadow: 3px 0 38px 0 rgba(54,6,92,0.6);
+        display: flex;
+        flex-direction: column;
+        @include for-tab-max{
+            flex: 0 0 100%;
+        }
+        .login-logo-part{
+            flex-shrink: 0;
+            background: url(../../assets/img/login-logo-bg.jpg);
+            padding:26px 20px;
+            text-align: center;
+            span{
+                display: block;
+                color: #fff;
+                font-size: 27px;
+                font-family: 'Poppins-Medium';
+                margin-top: 10px;
+            }
+        }
+        .login-inside{
+            .form-row{
+                margin-top: 30px;
+                .or-deviation{
+                    margin:20px 0 0 0;
+                    text-align: center;
+                    width: 100%;
+                    span{
+                        width:25px;
+                        height: 25px;
+                        background: #fff;
+                        border-radius: 50%;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: 0 0 0 7px rgba(176, 174, 179,0.7);
+                        font-size: 11px;
+                        text-transform: uppercase;
+                    }
+                }
+                .login-btn{
+                    width: 100%;
+                    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8c32d2+0,523678+100 */
+                    background: #8c32d2; /* Old browsers */
+                    background: -moz-linear-gradient(45deg,  #8c32d2 0%, #523678 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(45deg,  #8c32d2 0%,#523678 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(45deg,  #8c32d2 0%,#523678 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c32d2', endColorstr='#523678',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                    color: #fff;
+                    border: none;
+                    padding:12px 10px;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-family: 'Poppins-Medium';
+                    box-shadow:0 7px 10px 0 rgba(86,56,123,0.33);
+                    letter-spacing: 0.4px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                    &.guest-login-btn{
+                        background: linear-gradient(45deg, #ffba3c 0%, #ef8920 100%);
+                    }
+                }
+                &.pw-sec{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 20px;
+                    .forgot-link{
+                        a{
+                            color: #be246d;
+                            font-family: 'Poppins-Medium';
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            } 
+            .login-back{
+                text-align: center;
+                margin-top:75px;
+                a{
+                    color: #5b3685;
+                    i{
+                        margin-right:4px
+                    }
+                }
+            }           
+        }
+        .login-footer{
+            flex-shrink: 0;
+            text-align: center;
+            padding: 30px 10px;
+            p{
+                margin: 0;
+                font-size: 12px;
+                color: #5e5e5e;
+                a{
+                    color: #2b0558;
+                }
+            }
+        }
+    }
+    .login-graphics{
+        flex: 0 0 calc(100% - 515px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        background: url(../../assets/img/login-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        @include for-tab-max{
+            display: none;
+        }
+        img{
+            max-height: 100%;
+        }
+
+
+
+    }
+}
+
+
+
+
+::ng-deep .login-inside{
+    flex-grow: 1;
+    padding: 45px 55px;
+    @include for-sm-mobile{
+        padding: 20px 20px;
+    }
+    .form-row{
+        .mat-form-field{
+            width: 100%;
+            font-family: 'Poppins-Regular' !important;
+            .mat-form-field-wrapper{
+                .mat-form-field-flex{
+                    background: #fff;
+                    padding-top: 0;
+                    padding: 0 10px;
+                    .mat-form-field-infix{
+                        padding: 0;
+                        border-top: none;
+                        input.mat-input-element{
+                            height: 47px;
+                            color: #19164f;
+                            font-size: 13px;
+                            font-family: 'Poppins-Medium';
+                        }
+                        .mat-form-field-label-wrapper{
+                            top: 0;
+                            padding-top: 0;
+                            overflow: visible;
+                            .mat-form-field-label{
+                                margin-bottom: 0;
+                                transform:translate(0, -2px) scale(1);
+                                mat-label{
+                                    color: #19164f;
+                                    font-size: 13px;
+                                    font-family: 'Poppins-Medium';
+                                }
+                            }
+                        }
+                    }
+                    .mat-form-field-suffix{
+                        align-self: center;
+                        padding-bottom:6px;
+                    }
+                }
+                .mat-form-field-underline{
+                    height: 2px;
+                    background: #1b81c3;
+                }
+            }
+            &.mat-form-field-should-float{
+                .mat-form-field-wrapper{
+                    .mat-form-field-flex{
+                        .mat-form-field-infix{
+                            .mat-form-field-label-wrapper{
+                                .mat-form-field-label{
+                                    transform:translate(-10px, -37px) scale(1);
+                                    mat-label{
+                                        color: #282828;
+                                        font-family: 'Poppins-Regular';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    
+}
+
+
+::ng-deep .check-label{
+    .mat-checkbox{
+        .mat-checkbox-layout{
+            .mat-checkbox-inner-container{
+                width: 22px;
+                height: 22px;
+            }
+            .mat-checkbox-label{
+                color: #19164f;
+                font-size: 13px;
+                font-family: 'Poppins-Medium';
+            }
+            .mat-checkbox-frame{
+                border-color: #1b81c3;
+            }
+        }
+    }
+}

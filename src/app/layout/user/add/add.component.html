@@ -1,0 +1,99 @@
+<loading [state]="loading">
+    <section class="page-body">
+        <div class="panel-header">
+            <h2 class="heading">{{title}}</h2>
+        </div>
+        <div class="form-part box-shadow">
+            <div class="form-body">
+                <form [formGroup]="form" class="row">
+                    <div class="col-lg-4">
+                        <div class="input-field">
+                            <mat-form-field appearance="outline">
+                                <mat-label>First Name</mat-label>
+                                <input matInput formControlName="first_name" required [(ngModel)]="details.first_name">
+                                <mat-error *ngIf="isFieldValid(form,'first_name')">Please Enter First Name
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-field">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Last Name</mat-label>
+                                <input matInput formControlName="last_name" required [(ngModel)]="details.last_name">
+                                <mat-error *ngIf="isFieldValid(form,'last_name')">Please Enter First Name
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-field">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Username</mat-label>
+                                <input matInput formControlName="username" required [(ngModel)]="details.username">
+                                <mat-error *ngIf="isFieldValid(form,'username')">Please Enter Username</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-field">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input matInput formControlName="email" required [(ngModel)]="details.email">
+                                <mat-error *ngIf="isFieldValid(form,'email')">Please Enter Email
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="input-field">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Phone No.</mat-label>
+                                <input matInput formControlName="phone_no" required [(ngModel)]="details.phone_no">
+                                <mat-error *ngIf="isFieldValid(form,'phone_no')">Please Enter Phone No.
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-field">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Pin Code.</mat-label>
+                                <input matInput formControlName="pin_code" required [(ngModel)]="details.pin_code">
+                                <mat-error *ngIf="isFieldValid(form,'pin_code')">Please Enter Pin Code.
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-field">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Address.</mat-label>
+                                <textarea matInput maxlength="250" #address formControlName="address" required
+                            [(ngModel)]="details.address"></textarea>
+                            <mat-hint align="end">{{address.value.length}} / 250</mat-hint>
+                                <mat-error *ngIf="isFieldValid(form,'address')">Please Enter Address.
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="form-footer">
+                <button class="btn btn-danger" matRipple (click)="cancel()">
+                    <span>
+                        <i class="fas fa-times"></i>
+                    </span>
+                    Cancel
+                </button>
+                <button class="btn btn-green ml-3" matRipple (click)="save()">
+                    <span>
+                        <i class="far fa-paper-plane"></i>
+                    </span>
+                    Submit
+                </button>
+            </div>
+        </div>
+    </section>
+</loading>

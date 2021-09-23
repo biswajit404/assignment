@@ -1,0 +1,61 @@
+<loading [state]="loading">
+    <section class="login-body">
+        <div class="login-form">
+            <div class="login-logo-part" mat-button>
+                <span>Vibrant</span>
+            </div>
+            <div class="login-inside">
+                <form [formGroup]="form" novalidate>
+                    <div class="form-row">
+                        <mat-form-field appearance="standard">
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="email" formControlName="email" required>
+                            <mat-icon matSuffix>
+                                <svg fill="#19164f" fill="none" height="24px" width="25px" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                    <circle cx="12" cy="7" r="4" />
+                                </svg>
+                            </mat-icon>
+                            <mat-error *ngIf="isFieldValid(form,'email')">Please Enter email</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="form-row">
+                        <mat-form-field appearance="standard">
+                            <mat-label>Password</mat-label>
+                            <input matInput placeholder="Password" type="password" formControlName="password" required>
+                            <svg matSuffix height="23px" width="23px" style="enable-background:new 0 0 1262 1710.258;"
+                                version="1.1" viewBox="0 0 1262 1710.258" xml:space="preserve" style="fill:#19164f;"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="unlock">
+                                    <g>
+                                        <path d="M1196.495,713.258H1090V459.592c0-253.285-205.603-459.35-458.802-459.35c-253.198,0-458.994,206.2-458.994,459.649    
+                    c0,36.494,29.678,66.071,66.168,66.071c36.491,0,66.119-29.577,66.119-66.071c0-180.588,146.418-327.508,326.753-327.508    
+                    C811.58,132.384,958,279.168,958,459.592v253.666H66.686C30.195,713.258,0,742.241,0,778.731v766.42    
+                    c0,91.079,74.712,165.106,165.792,165.106h931.597c91.08,0,164.611-74.027,164.611-165.106v-766.42    
+                    C1262,742.241,1232.985,713.258,1196.495,713.258z M1130,1545.151c0,18.218-14.395,33.106-32.611,33.106H165.792    
+                    c-18.216,0-33.792-14.889-33.792-33.106V845.258h998V1545.151z" />
+                                        <path d="M631,1409.707c36.491,0,66-29.58,66-66.071v-237.854c0-36.49-29.51-66.07-66-66.07c-36.49,0-66,29.58-66,66.07v237.854    
+                    C565,1380.127,594.509,1409.707,631,1409.707z" />
+                                    </g>
+                                </g>
+                                <g id="Layer_1" />
+                            </svg>
+                            <mat-error *ngIf="isFieldValid(form,'password')">Please Enter Password</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="form-row pw-sec">
+                        <div class="check-label">
+                            <mat-checkbox formControlName="rememberme">Remember me</mat-checkbox>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <button class="login-btn" matRipple (click)="onSubmit()" >Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="login-graphics"></div>
+    </section>
+</loading>
